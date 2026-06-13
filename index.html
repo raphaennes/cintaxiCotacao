@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
     <title>cintaxiCotacao</title>
 </head>
 <body>
     
 <header>
-    
+    <h1>Cintaxi Seguros</h1>
 </header>
+
+<section class="container-cotacao">
+    <h2>Qual tipo de cotação você deseja fazer?</h2>
+    <p><b>Simule gratuitamente</b> em um só lugar</p>
+    
+    <form>
+        <fieldset>
+            <label for="tipo-seguro">Selecione o tipo de seguro:</label>
+            <br>
+            <select id="tipo-seguro" name="categoria_seguro">
+              <option value="auto">Seguro de auto</option>
+              <option value="telefone">Seguro de telefone</option>
+              <option value="residencial">Seguro de residencial</option>
+              <option value="vida">Seguro de vida</option>
+              <option value="moto">Seguro moto</option>
+              <option value="viagem">Seguro viagem</option>
+            </select>
+            <button type="submit">Cotar grátis</button>
+        </fieldset>
+    </form>
+</section>
 
 </body>
 </html>
