@@ -5,39 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
     <title>cintaxiCotacao</title>
+
+     <script src="./script.js" defer></script>
 </head>
 <body>
     
-<header>
-    <h1>Cintaxi Seguros</h1>
-</header>
+    <header>
+        <img src="imgs/logoCintaxi.png" alt="Logo da Cintaxi" class="logo-cintaxi">
+    </header>
 
-<section class="container-cotacao">
-    <h2>Qual tipo de cotação você deseja fazer?</h2>
-    <p><b>Simule gratuitamente</b> em um só lugar</p>
-    
-    <form>
-        <fieldset>
-            <label for="tipo-seguro">Selecione o tipo de seguro:</label>
-            <br>
-            <select id="tipo-seguro" name="categoria_seguro">
-              <option value="auto">Seguro de auto</option>
-              <option value="telefone">Seguro de telefone</option>
-              <option value="residencial">Seguro de residencial</option>
-              <option value="vida">Seguro de vida</option>
-              <option value="moto">Seguro moto</option>
-              <option value="viagem">Seguro viagem</option>
+    <section class="secao-fundo">
+        
+        <div class="container-cotacao">
+            <h2>Qual tipo de cotação você deseja fazer?</h2>
+            <p class="subtitle">Simule gratuitamente em um só lugar</p>
+            
+            <p class="label-text">Selecione o tipo de seguro:</p>
+            
+            <div class="options-grid">
+                <input type="radio" id="seguro-auto" name="tipo-seguro" value="auto" checked>
+                <label for="seguro-auto" class="option-card">
+                    <img src="imgs/imgCotacaoCarro.jpeg" alt="Ícone Carro">
+                    <span>Auto</span>
+                </label>
+                
+                <input type="radio" id="seguro-moto" name="tipo-seguro" value="moto">
+                <label for="seguro-moto" class="option-card">
+                    <img src="imgs/imgCotacaoMoto.jpg" alt="Ícone Moto">
+                    <span>Moto</span>
+                </label>
+                
+                <input type="radio" id="seguro-celular" name="tipo-seguro" value="celular">
+                <label for="seguro-celular" class="option-card">
+                    <img src="imgs/imgCotacaoCell.png" alt="Ícone Celular">
+                    <span>Celular</span>
+                </label>
+                
+                <input type="radio" id="seguro-residencial" name="tipo-seguro" value="residencial">
+                <label for="seguro-residencial" class="option-card">
+                    <img src="imgs/imgCotacaoResidencial.jpeg" alt="Ícone Casa">
+                    <span>Residencial</span>
+                </label>
+            </div>
+            
+            <select name="outros-seguros" class="others-select">
+                <option value="">Outros</option>
+                <option value="vida">Seguro de vida</option>
+                <option value="viagem">Seguro viagem</option>
             </select>
-            <button type="submit">Cotar grátis</button>
-        </fieldset>
-    </form>
-</section>
+            
+            <button class="submit-btn">Cotar grátis</button>
+            
+            <div class="card-footer">
+                <p style="margin-bottom: 10px; font-size: 0.8rem;">🔒 Ambiente 100% Seguro. </p>
+                <div class="partner-logos" style="display: flex; justify-content: center; gap: 10px;">
+                    <img src="imgs/logosSeguradoras/bradescoLogo.jpg" alt="Logo Bradesco" style="height: 15px;">
+                    <img src="imgs/logosSeguradoras/portoSeguroLogo.png" alt="Logo Porto Seguro" style="height: 15px;">
+                    <img src="imgs/logosSeguradoras/maphreLogo.png" alt="Logo Maphre logo" style="height: 15px;">
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 </body>
 </html>
